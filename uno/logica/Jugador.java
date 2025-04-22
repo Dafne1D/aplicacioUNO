@@ -1,4 +1,4 @@
 package uno.logica;
 
-public class carta {
+public class Jugador {
 }

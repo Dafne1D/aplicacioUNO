@@ -1,4 +1,4 @@
 package uno.logica;
 
-public class pilo {
+public class Mazo {
 }

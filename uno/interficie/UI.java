@@ -86,10 +86,12 @@ public class UI {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Quantes persones jugaran?");
         int quantitatJugadors = myObj.nextInt();
+        myObj.nextLine();
 
         ArrayList<String> arrayJugadors = new ArrayList<>();
 
         for (int i = 0; i < quantitatJugadors; i++) {
+            System.out.println(i);
             arrayJugadors.add(myObj.nextLine());
         }
         return arrayJugadors;

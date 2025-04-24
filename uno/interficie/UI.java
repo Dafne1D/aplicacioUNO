@@ -2,6 +2,7 @@ package uno.interficie;
 
 import java.util.ArrayList;
 import uno.logica.*;
+import java.util.Scanner;
 public class UI {
     // ANSI escape codes
     public static final String RESET = "\u001B[0m";
@@ -70,6 +71,16 @@ public class UI {
             System.out.println();
         }
     }
+    public static void introduirJugadors() {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Quantes persones jugaran?");
+        int quantitatJugadors = myObj.nextInt();
 
+        String[] arrayJugadors = new String[quantitatJugadors];
+
+        for (int i = 0; i < quantitatJugadors; i++) {
+            arrayJugadors[i] = myObj.nextLine();
+        }
+    }
 }
 

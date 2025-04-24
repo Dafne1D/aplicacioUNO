@@ -71,16 +71,17 @@ public class UI {
             System.out.println();
         }
     }
-    public static void introduirJugadors() {
+    public static ArrayList<String> introduirJugadors() {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Quantes persones jugaran?");
         int quantitatJugadors = myObj.nextInt();
 
-        String[] arrayJugadors = new String[quantitatJugadors];
+        ArrayList<String> arrayJugadors = new ArrayList<>();
 
         for (int i = 0; i < quantitatJugadors; i++) {
-            arrayJugadors[i] = myObj.nextLine();
+            arrayJugadors.add(myObj.nextLine());
         }
+        return arrayJugadors;
     }
 }
 

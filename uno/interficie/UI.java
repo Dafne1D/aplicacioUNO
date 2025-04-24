@@ -70,6 +70,17 @@ public class UI {
             }
             System.out.println();
         }
+        System.out.print("   ");
+        for (int j = 0; j < quantitat; j++) {
+            if (j+1<10) {
+                System.out.print("(" + (j+1) +")          ");
+            }
+            else {
+                System.out.print("(" + (j+1) +")         ");
+            }
+        }
+
+        System.out.println();
     }
     public static ArrayList<String> introduirJugadors() {
         Scanner myObj = new Scanner(System.in);

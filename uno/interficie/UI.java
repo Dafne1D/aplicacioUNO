@@ -1,5 +1,6 @@
 package uno.interficie;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import uno.logica.*;
 import java.util.Scanner;
@@ -89,10 +90,20 @@ public class UI {
         myObj.nextLine();
 
         ArrayList<String> arrayJugadors = new ArrayList<>();
-
-        for (int i = 0; i < quantitatJugadors; i++) {
-            System.out.println(i);
-            arrayJugadors.add(myObj.nextLine());
+        if(quantitatJugadors <2){
+            System.out.println("El minim de jugadors son 2, torna a introduir un número de jugadors");
+            quantitatJugadors = myObj.nextInt();
+            myObj.nextLine();
+            for (int i = 0; i < quantitatJugadors; i++) {
+                String nomJugador = myObj.nextLine();
+                arrayJugadors.add(nomJugador);
+            }
+        }
+        else {
+            for (int i = 0; i < quantitatJugadors; i++) {
+                String nomJugador = myObj.nextLine();
+                arrayJugadors.add(nomJugador);
+            }
         }
         return arrayJugadors;
     }

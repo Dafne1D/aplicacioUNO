@@ -28,11 +28,16 @@ public class OrdreJugador {
        Collections.shuffle(nomsJugadors);
     }
 
-    public String getJugadorActiu(){
-        return nomsJugadors.get(jugadorActiu);
+    public Jugador getJugadorActiu(){
+        return jugadors.get(jugadorActiu);
     }
 
     public void passarTorn(){
-
+        if (jugadorActiu == nomsJugadors.size()-1){
+            jugadorActiu = 0;
+        }
+        else {
+            jugadorActiu ++;
+        }
     }
 }

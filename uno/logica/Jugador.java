@@ -20,12 +20,30 @@ public class Jugador {
         return cartes;
     }
 
-    public void addCarta(Carta carta){
-        cartes.add(carta);
-    }
-
     public void tirarCarta(Pilo pilo, Carta carta){
         pilo.getCartes().push(carta);
         cartes.remove(carta);
     }
+
+    public void robarCarta (Mazo mazo){
+        if (!mazo.getCartes().isEmpty()){
+            cartes.add(mazo.agafarCarta());
+        }
+    }
+
+    public int nombreCartes(){
+        return cartes.size();
+    }
+
+    public boolean potTirarCarta(Pilo pilo){
+        boolean potTirar = false;
+        Carta ultimaCarta = pilo.consultarCarta();
+        for (Carta carta : cartes){
+            if (Regles.sonCompatibles(carta, ultimaCarta)){
+                potTirar = true;
+            }
+        }
+        return potTirar;
+    }
+
 }

@@ -3,6 +3,7 @@ package uno;
 
 public class Main {
     public static void main(String[] args) {
-        Partida.Jugar();
+        Partida partida = new Partida();
+        partida.Jugar();
     }
 }

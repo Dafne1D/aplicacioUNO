@@ -18,7 +18,7 @@ public class Partida {
     public void Jugar(){
         preparar();
         repartirCartes();
-        torn();
+        //torn();
     }
 
     private void preparar(){
@@ -33,10 +33,6 @@ public class Partida {
             ordreJugadors.passarTorn();
 
             quantitatJugadors = nomsJugadors.size();
-
-            while(!noGuanya){
-                Jugar();
-            }
     }
 
 
@@ -47,8 +43,8 @@ public class Partida {
         }
     }
 
-    private boolean torn(){
-        ordreJugadors.getJugadorActiu();
-    }
+//    private boolean torn(){
+        //ordreJugadors.getJugadorActiu();
+ //   }
 
 }
